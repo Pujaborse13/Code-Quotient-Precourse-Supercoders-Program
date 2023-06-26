@@ -1,0 +1,8 @@
+principal = float(input())
+rate = float(input())
+time = float(input())
+def com_int(principal,rate,time):
+  amount = principal*(pow((1+ rate/100),time))
+  return round(amount,1)
+CI = com_int(principal,rate,time)
+print(CI)

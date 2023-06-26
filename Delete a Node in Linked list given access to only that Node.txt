@@ -1,0 +1,13 @@
+# class Node:
+#   def __init__(self, data):
+#     self.data = data
+#     self.next = None
+#
+# The above class is used to define a linked list node
+def deleteNode(node):
+  if node is None or node.next is None:
+    return
+  next_node = node.next
+  node.data = next_node.data
+  node.next = next_node.next
+  # Write your code here

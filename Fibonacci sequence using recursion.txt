@@ -1,0 +1,19 @@
+n = int(input())
+def fibonacci_seq(n):
+  if n <=0:
+    return[]
+  if n ==1:
+    return[0]
+  if n ==2:
+    return[0,1]
+  if n ==3:
+    return[0,1,1]
+  fib_seq = fibonacci_seq(n-1)
+  fib_seq.append(fib_seq[-1] + fib_seq[-2])
+  return fib_seq
+fib_seq_rev = fibonacci_seq(n)
+for i in range(len(fib_seq_rev)-1,-1,-1):
+  print(fib_seq_rev[i])
+#fib_seq_rev.reverse()
+#for term in fib_seq_rev:
+ # print(term)

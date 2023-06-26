@@ -1,0 +1,9 @@
+num = int(input())
+def reve(num):
+  r = int(str(num)[::-1])
+  if r == num:
+    return("Equal")
+  else:
+    return("Not Equal")
+n_n = reve(num)
+print(n_n)

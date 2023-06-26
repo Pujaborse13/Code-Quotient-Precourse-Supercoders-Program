@@ -1,0 +1,9 @@
+ch = str(input())
+def check_char(ch):
+  if ch.islower():
+    return("lower")
+  else:
+    #ch.isupper():
+    return("UPPER")
+char_c = check_char(ch)
+print(char_c)

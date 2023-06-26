@@ -1,0 +1,54 @@
+
+ /* struct Node{
+ int data;
+ Node *next;
+ };
+ the above strutcure defines the linked list node
+ */
+Node* shiftSmallLarge(Node* head) 
+{
+  if(head == NULL || head -> next== NULL)
+  {
+     return head;
+     }
+     struct Node* temp = head;
+      struct Node* max = head;
+      struct Node* min = head;
+   while(temp != NULL)
+   {
+    if(min -> data > temp -> data)
+    { 
+      min = temp;
+    }
+    if(max-> data < temp -> data)
+    {
+      max = temp;
+    }
+    temp = temp -> next;
+     }
+  if(head != min)
+  {
+    temp = head;
+    while(temp -> next != min)
+  {
+    temp = temp -> next;
+    }
+      temp -> next = min -> next;
+ 	 min -> next = head;
+     head = min;
+  }  
+   temp = head;  
+   while(temp -> next != max)
+  {
+      temp = temp -> next;
+   }
+      temp -> next = max -> next;
+      temp = head;
+      while(temp -> next != NULL)
+      {
+        temp = temp -> next;
+      }
+    max -> next = NULL;
+     temp -> next = max;
+  return head;
+  }

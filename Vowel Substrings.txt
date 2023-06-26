@@ -1,0 +1,8 @@
+# Return the number of substrings that start from a vowel
+def countVowelSubstr(str):
+  vowels = set(["a","e","i","o","u","A","E","I","O","U"])
+  count = 0
+  for i in range(len(str)):
+    if str[i] in vowels:
+      count += len(str)-i
+  return count%10007

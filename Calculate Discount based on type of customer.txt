@@ -1,0 +1,19 @@
+ef dis1(amount):
+  d_a = 0
+  if amount < 1000:
+    d_a = 0
+  elif 1001 <=  amount <= 5000:
+    d_a = amount * 0.05
+  elif 5001 <= amount <= 10000:
+    d_a = amount * 0.1
+  elif amount > 10000:
+    d_a = amount * 0.15
+  else:
+    d_a = 0
+  if amount > 30000:
+    d_a += amount * 0.02
+  return format(amount - d_a, ".2f")
+  #return round((amount - d_a),2)
+bill = dis1(amount)
+print(bill)
+#print("{:.f}".format(bill))

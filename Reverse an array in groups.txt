@@ -1,0 +1,30 @@
+# Return the modified array after performing the task
+def reverseSubarray(arr, n, k):
+  n = len(arr)
+  i =0
+  while i<n:
+    left = i
+    right = min(i + k -1, n-1)
+    while left < right:
+      arr[left],arr[right] = arr[right],arr[left]
+      left += 1
+      right -= 1
+    i += k
+  return arr
+  
+  
+  
+  
+  def main():
+      n = int(input().strip())
+      string  = input().strip().split()
+      arr=[]
+      for j in string:
+          arr.append(int(j.strip()))
+      k=int(input().strip())
+      arr = reverseSubarray(arr,n,k)
+      for i in arr:
+          print(i,end=' ')
+  
+  if __name__ == "__main__":
+    main()

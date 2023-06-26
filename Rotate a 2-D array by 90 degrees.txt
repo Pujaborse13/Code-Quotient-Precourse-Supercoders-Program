@@ -1,0 +1,20 @@
+def rotateMatrix(matrix,N):
+  rotated_matrix = [[0] * N for _ in range(N)]
+  for i in range(N):
+    for j in range(N):
+      rotated_matrix [j][N - i - 1]= matrix[i][j]
+  for row in rotated_matrix:
+    print(' '.join(map(str,row)))
+  #print()
+def main():
+  T = int(input())
+  for _ in range(T):
+    N = int(input())
+    matrix = []
+    for _ in range(N):
+      row = list(map(int,input().split()))
+      matrix.append(row)                    
+    rotateMatrix(matrix,N)
+    print()
+if __name__ == "__main__":
+  main()

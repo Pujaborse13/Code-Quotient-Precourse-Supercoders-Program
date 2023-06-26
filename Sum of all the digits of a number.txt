@@ -1,0 +1,14 @@
+def sum_of_digits(n):
+  if n < 10:
+    return n
+  else:
+    return n % 10 + sum_of_digits(n//10)
+def main():
+  num_test_cases = int(input())
+  numbers=[]
+  for __ in range(num_test_cases):
+    num = int(input())
+    digit_sum = sum_of_digits(num)
+    print(digit_sum)
+if __name__ == "__main__":
+  main()

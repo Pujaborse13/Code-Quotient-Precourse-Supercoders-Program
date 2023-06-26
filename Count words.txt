@@ -1,0 +1,4 @@
+# Return the count of words in string
+def countWords(string):
+  words = string.split()
+  return(len(words))

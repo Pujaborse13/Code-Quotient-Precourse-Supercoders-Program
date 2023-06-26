@@ -1,0 +1,15 @@
+def power(num, Pow):
+  if Pow<0:
+    return -1
+  else:
+    r = pow(num,Pow)
+    return r
+    
+    
+    
+    def main():
+      a,b = map(int,input().split())
+      print(int(power(a, b)))
+    
+    if __name__ == "__main__":
+  main()

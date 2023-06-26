@@ -1,0 +1,21 @@
+def gcd(i, j):
+  if j ==0:
+    return i
+  else:
+    return gcd(j,i%j)
+def main():
+  T = int(input())
+  while T> 0:
+    i,j = map(int,input().split())
+    print(gcd(i,j))
+    T -= i
+    
+    def main():
+        T = int(input())
+        while(T>0):
+            i,j=map(int, input().split() )
+            print(int(gcd(i, j)))
+            T-= 1
+    
+    if __name__ == "__main__":
+    main()

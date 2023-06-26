@@ -1,0 +1,6 @@
+a,b,c = map(int, input().split())
+def larg_thr(a,b,c):
+  large = max(a,b,c)
+  return large
+lar = larg_thr(a,b,c)
+print(lar)

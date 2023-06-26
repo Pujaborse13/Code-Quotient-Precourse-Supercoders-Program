@@ -1,0 +1,15 @@
+String = str(input())
+def vowel_consonats(String):
+  l = ["a","e","i","o","u"]
+  v_c = 0
+  c_c = 0
+  l
+  for i in String.lower():
+    if i in l :
+      v_c += 1
+    else:
+      c_c += 1
+  return v_c,c_c
+re = vowel_consonats(String)
+output = f"{re[0]} {re[1]}"
+print(output)

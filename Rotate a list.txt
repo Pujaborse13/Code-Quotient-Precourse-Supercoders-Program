@@ -1,0 +1,15 @@
+def rotate_array(arr,R):
+  N = len(arr)
+  R = R % N
+  rotated_arr = arr[R:] + arr[:R]
+  return rotated_arr
+def main():
+  T = int(input())
+  for _ in range(T):
+    N= int(input())
+    arr = list(map(int,input().split()))
+    R = int(input())
+    rotated_arr = rotate_array(arr,R)
+    print(*rotated_arr)
+if __name__ == "__main__":
+  main()

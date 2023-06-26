@@ -1,0 +1,26 @@
+def counterDiagonal(matrix, n):
+  for k in range(n):
+    i,j=0,k
+    while j >= 0:
+      print(matrix[i][j], end=" ")
+      i += 1
+      j -= 1
+  for k in range(1,n):
+    i,j = k,n-1
+    while i < n:
+      print(matrix[i][j], end=" ")
+      i += 1
+      j  -= 1
+  print()
+  
+  
+  
+  if __name__ == '__main__':
+    n = int(input())
+    matrix = []
+    for _ in range(n):
+      matrix.append(list(map(int,input().split())))
+  counterDiagonal(matrix,n)
+  
+  
+  

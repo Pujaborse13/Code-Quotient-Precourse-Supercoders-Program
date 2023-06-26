@@ -1,0 +1,10 @@
+a = ["a","e","i","o","u"]
+ch = str(input())
+def vowel_cons(ch):
+  #v = ch.lower()
+  if ch.lower() in a:
+    return("vowel") 
+  else:
+    return("consonant")
+v_c = vowel_cons(ch)
+print(v_c)

@@ -1,0 +1,9 @@
+import math
+n = int(input())
+def isSquare(n):
+  sqrtN = int(math.sqrt(n))
+  if sqrtN * sqrtN == n:
+      print("yes")
+  else:
+      print("no")
+isSquare(n)

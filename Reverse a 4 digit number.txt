@@ -1,0 +1,11 @@
+num = int(input())
+re_num = 0
+def recur_rev(num):
+  global re_num
+  if(num>0):
+    reminder = num % 10
+    re_num = (re_num * 10) + reminder
+    recur_rev(num // 10)
+  return(re_num)
+reverse_num = recur_rev(num)
+print(reverse_num)
